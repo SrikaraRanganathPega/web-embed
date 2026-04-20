@@ -1,0 +1,371 @@
+:host * {
+  font-family: 'Manrope'!important;
+}
+
+/* Workarea assignment view */
+article {
+  box-shadow: none !important;
+}
+
+/* Layout field spacing */
+div[data-testid^="column-count"] {
+  gap: 0.8rem 1.6rem !important;
+}
+
+div[data-testid^="field-block"] {
+  gap: 0.8rem 1.6rem !important;
+}
+
+form > div:first-child {
+  gap: 1.6rem !important;
+  padding-bottom: 1.6rem !important;
+}
+
+form > div:nth-child(2) {
+  gap: 0.8rem !important;
+}
+
+/* Banners */
+div[data-testid=":banner:"] {
+  grid-template-columns: 3.2rem minmax(0, 1fr) !important;
+}
+
+div[data-testid=":banner:"] > div:nth-child(2) {
+  padding: 0.4rem 0.4rem 0.4rem 1.6rem;
+}
+
+div[data-testid=":banner:"] > div:nth-child(2) span[data-testid=":banner:message-label"] {
+  font-size: 1.4rem !important;
+}
+
+div[data-testid=":banner:"] > div:nth-child(2) span[data-testid=":banner:message-description"] {
+  font-size: 1.2rem !important;
+}
+
+ul[role="listbox"] > li > div[data-testid=":summary-item:"] span {
+  font-size: 1.4rem !important;
+}
+
+/* Headings */
+h1 { font-size: max(1.7rem, 12px)!important; }
+
+h2 { font-size: max(1.6rem, 12px)!important; }
+
+h3 { font-size: max(1.5rem, 12px)!important; }
+
+h4,
+fieldset > legend span{ 
+  font-size: max(1.4rem, 12px)!important;
+}
+
+/* Helper text below field */
+[data-testid$=":info"]:not(:empty) { font-size: 1.2rem!important; gap: 0.4rem !important; }
+
+
+/* Multi-step form */
+form>div>div:nth-child(1) > div > ol > li > button {
+  width: max(1.5rem, 12px) !important;
+  height: max(1.5rem, 12px) !important;
+}
+
+form>div>div>ol button {width: 2rem!important;height: 2rem!important;}
+
+article[data-testid=":hierarchical-assignments:"] form ol > li:has(~ li button[aria-current="step"]) button {
+  background-color: #D7BFF1 !important;
+}
+
+/* Labels */
+div:has(>label) {
+  margin-bottom: 0.2rem!important;
+}
+
+label {
+  font-size: 1.3rem !important;  
+}
+
+/* Attachments */
+.pega-file-input + div,
+div[data-testid=":file-input:files"] > div {
+  height: 3.2rem;
+  border-radius: 0.4rem;
+}
+
+.pega-file-input span {
+  font-size: 1.2rem;
+}
+
+div[data-testid=":file-input:files"] > div >div:first-child {
+	height: 3.2rem !important;
+	width: 3.2rem !important;
+	font-size:1.6rem!important;
+}
+
+/* Dropdowns */
+select {
+  font-size: 1.4rem!important;
+  height: 3rem !important;
+  padding: 0 3.2rem 0 0.8rem !important;
+  background-size: calc(1.6rem)!important;
+  background-position: calc(100% - 0.8rem) 60% !important;
+}
+
+/* Date input */
+.pega-date-input {
+  border-radius: 0.4rem !important;
+}
+
+.pega-date-input input::placeholder {
+  font-size: 0.9rem;
+} 
+
+.pega-data-input div {
+  font-size: 1.4rem;
+}
+
+.pega-date-input button {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
+.pega-date-input input {
+  margin-right: 0.2rem;
+  font-size: 1.4rem !important;
+}
+
+div[data-testid=":date-input:picker:date-picker:"] {
+  padding: 0 0.8rem 0.8rem;
+}
+
+div[data-testid=":date-input:picker:date-picker:"] fieldset {
+  margin: 1.6rem 0.4rem;
+  font-size: 1.4rem;
+}
+
+div[data-testid=":date-input:picker:date-picker:"] table {
+  font-size: 1.4rem;
+}
+
+div[data-testid=":date-input:picker:date-picker:"] table th abbr {
+  font-size: 1.2rem;
+}
+
+div[data-testid=":date-input:picker:date-picker:"] table th,
+div[data-testid=":date-input:picker:date-picker:"] table td {
+  max-width: 4.2rem;
+  padding-bottom: 0.8rem;
+}
+
+/* Rich text fields */
+dl dt {
+  font-size: max(1.3rem, 12px) !important;
+}
+
+dl dd {
+  font-size: 1.4rem;
+}
+
+[data-testid=":html:"] {
+  font-size: 1.4rem !important;
+}
+
+/* Inputs */
+.pega-input, .pega-combo-box {
+  font-size: 1.4rem;
+  border-radius: 4px!important;
+  height: 3.2rem !important;
+  border: 1px solid #9da8b3;
+  border-radius: 0.4rem !important;
+  padding: 0 0.8rem!important;
+}
+
+/* Combobox */
+.pega-combo-box {
+  height: 3rem !important;
+}
+
+/* Links & related elements */
+a,
+button.pega-button-variant-link,
+button[data-testid=":link:preview"],
+button.pega-button-variant-link span {
+  font-weight: 800;
+}
+
+/* Reusable HBL Consent group */
+fieldset[aria-label="Consent"] > legend > div > div > button.pega-button-variant-text > div[as="span"] > span,
+fieldset[aria-label="Consent"] > legend > div > div > span,
+fieldset[aria-label="Disclaimers"] > legend > div > div > span,
+fieldset[aria-label="Consent link"] > legend > div > div > span {
+  display: none;
+  visibility: hidden;
+}
+
+fieldset[aria-label="Consent"] > legend > div > div > button.pega-button-variant-text > div[as="span"] > svg {
+  fill: #9C60DD;
+  width: 2rem;
+  height: 2rem;
+}
+
+fieldset[aria-label="Consent"] > div input[type="checkbox"] + label > div {
+  margin-top: 0.32rem;
+}
+
+fieldset[aria-label="Consent"] > div input[type="checkbox"] + label {
+  align-items: flex-start;
+}
+
+fieldset[aria-label="Consent"] > div input[type="checkbox"][readonly][checked] + label > div {
+  background: #d7bff1;
+  border: 2px solid #d7bff1;
+}
+ 
+fieldset[aria-label="Consent"] > div input[type="checkbox"][readonly] + label > div {
+  border: 2px solid #cfcfcf;
+}
+
+div:has(>fieldset[aria-label="Consent"]) {
+  border: none !important;
+  background-color: #F8F8FC;
+  padding: 0.8rem !important;
+}
+
+fieldset[aria-label="Consent"] dl,
+fieldset[aria-label="Disclaimers"] dl {
+  max-width: 100%;
+}
+
+fieldset[aria-label="Consent link"] > legend {
+  margin-bottom: 0 !important;
+}
+ 
+fieldset[aria-label="Consent link"] > div > div > div {
+  gap: 0;
+}
+
+/* Buttons */
+.pega-button {
+  font-size: 1.4rem;
+  padding: 0 1.8rem !important;
+  border-radius: 0.8rem !important;
+  border-width: 1px !important;
+}
+
+button.pega-button-icon {
+  padding: 0 !important;
+}
+
+/* Field groups */
+div:has(>fieldset[aria-label]:not([aria-label="Consent link"]):not([aria-label="Disclaimers"])) {
+  padding: 0.8rem !important;
+}
+
+fieldset[aria-label] > legend {
+  margin-bottom: 1.2rem !important;
+}
+
+.pega-button[aria-label^="Collapse"] { /* Collapsible header icon */
+  padding:0!important;
+}
+
+.pega-button > div > span, /* Collapsible header text */
+button span { 
+  font-size: 1.4rem !important;
+}
+
+button.pega-button-variant-secondary { /* Secondary button */
+  color: #9C60DD;
+  font-weight: 600;
+}
+
+/* SVG */
+.pega-button svg,
+li svg,
+div[data-testid=":banner:"] svg {
+  width: 1.8rem !important;
+  height: 1.8rem !important;
+}
+
+/* Checkboxes */
+input[type="checkbox"] + label {
+  font-size: 1.4rem !important;
+}
+
+input[type="checkbox"] + label > div {
+  border-color: #9C60DD;
+  border-width: 2px;
+  border-radius: 5.2px !important;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.8rem;
+}
+
+input[type="checkbox"] + label > div::after {
+  border-color: #FFFFFF !important;
+}
+
+/* Radio buttons */
+input[type="radio"] {
+  width: 2rem !important;
+  height: 2rem !important;
+}
+
+input[type="radio"] + label {
+  margin-right: 1rem !important;
+  font-size: 1.4rem !important;
+}
+
+input[type="radio"] + label > div {
+  background-color: #ffffff !important;
+  margin-right: 0.64rem !important;
+  width: 2rem !important;
+  height: 2rem !important;
+}
+
+input[type="radio"] + label > div::after {
+  border-color: #9C60DD !important;
+  background-color: #9C60DD !important;
+  width: 1rem !important;
+  height: 1rem !important;
+}
+
+/* Override focus indicators */
+input[type="checkbox"] + label > div:focus:not([disabled]):not([readonly]),
+input[type="radio"] + label > div:focus:not([disabled]):not([readonly]),
+input[type="checkbox"]:focus:not([disabled]):not([readonly]) + label > div,
+input[type="radio"]:not([disabled]):not([readonly]) + label > div {
+  box-shadow: unset !important;
+}
+
+/* Spinner */
+div[role="progressbar"] svg {
+  width: 3.2rem !important;
+  height: 3.2rem !important;
+}
+
+/* Hide default loader */
+form:has(button[aria-label^="Your details"][aria-current="step"]):has(button.pega-button-variant-primary[disabled]) div[role="progressbar"] > svg {
+  display: none;
+}
+
+form:has(button[aria-label^="Your details"][aria-current="step"]):has(button.pega-button-variant-primary[disabled]) div[role="progressbar"] {
+  width: fit-content;
+  font-weight: bold;
+  font-family: Awesome;
+  font-size: 25px;
+  padding-bottom: 8px;
+  background: linear-gradient(currentColor 0 0) 0 100%/0 7px no-repeat;
+  animation: loader 2s linear infinite;
+  color: #9b59b6;
+}
+
+form:has(button[aria-label^="Your details"][aria-current="step"]):has(button.pega-button-variant-primary[disabled]) div[role="progressbar"]:before {
+  content: url('images/HBLSpinnerIcon.png') '\A Sit tight while we process your application\A' url('images/HBLSpinnerFootnote.png');
+  white-space: pre;
+  color: black;
+}
+
+@keyframes loader {
+  to {
+    background-size: 100% 7px;
+  }
+}
